@@ -1,6 +1,6 @@
 import { EmailModel } from "./email.model";
 import { readFile, writeFile } from 'fs/promises'
-import path from 'node:path';
+import * as path from 'node:path';
 
 const EMAIL_BD_PATH = path.resolve('email.bd.json');
 
