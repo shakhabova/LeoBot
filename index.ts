@@ -4,7 +4,7 @@ import { EmailBD } from './emails.bd';
 import 'dotenv/config'
 
 const bot = new Bot(process.env.BOT_TOKEN!); // <-- put your bot token between the "" (https://t.me/BotFather)
-const chatId = -4219687159;
+const chatId = -1002196491953;
 const emailsBD = new EmailBD();
 
 bot.hears(/лео[,]* представься/i, (ctx) => {
@@ -21,6 +21,9 @@ bot.command('google_meet', (ctx)=>{
  ctx.reply('https://meet.google.com/gww-tviv-wvj')
 });
 
+bot.hears(/check_id/i, ctx => {
+  console.log(ctx.chat);
+})
 
 bot.hears(/спасибо лео/i, (ctx) => {
   console.log(ctx.chat.id);
@@ -66,7 +69,7 @@ Link: <code>${email.link}</code>`, { parse_mode: 'HTML'})
 // bot.on('message:sticker', ctx => console.log(ctx.message.sticker))
 
 const job = new CronJob(
-  '0 0 16 * * FRI', // cronTime
+  '0 35 15 * * FRI', // cronTime
   function () {
     bot.api.sendMessage(
       chatId,
@@ -77,5 +80,17 @@ const job = new CronJob(
   true, // start
   'Europe/Istanbul' // timeZone
 );
+// const job2 = new CronJob(
+//   '0 46 9 * * WED', // cronTime
+//   function () {
+//     bot.api.sendMessage(
+//       chatId,
+//       'Привет, команда! \n\n Напоминаю, что сегодня в 10:00 по времени Стамбула у вас запланирован звонок с Фатимой. Чтобы получить ссылку на Google Meet, пожалуйста, введите команду ниже. \n\n Желаю всем продуктивного и успешного дня! '
+//     );
+//   }, // onTick
+//   null, // onComplete
+//   true, // start
+//   'Europe/Istanbul' // timeZone
+// );
 
 bot.start();
