@@ -1,4 +1,5 @@
 node_modules
 dist
 email.bd.json
+admin_panels.bd.json
 .env
