@@ -80,6 +80,17 @@ const job = new CronJob(
   true, // start
   'Europe/Istanbul' // timeZone
 );
+const job3 = new CronJob(
+  '0 0 11 * * TUE', // cronTime
+  function () {
+    bot.api.sendMessage(
+      chatId,
+      'Здравствуйте, коллеги! \n\nНапоминаю, что месяц подходит к концу, и пора подводить итоги. Пожалуйста, не забудьте отправить свои отчеты по таскам, которые были выполнены в течение месяца. Это поможет нам оценить наши достижения и определить приоритеты на предстоящий месяц.');
+  }, // onTick
+  null, // onComplete
+  true, // start
+  'Europe/Istanbul' // timeZone
+);
 // const job2 = new CronJob(
 //   '0 46 9 * * WED', // cronTime
 //   function () {
