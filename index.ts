@@ -80,6 +80,19 @@ const job = new CronJob(
   true, // start
   'Europe/Istanbul' // timeZone
 );
+
+const job2 = new CronJob(
+  '0 20 11 * * MON', // cronTime
+  function () {
+    bot.api.sendMessage(
+      chatId,
+      'Доброе утро, команда! \n\nНадеюсь, вы хорошо отдохнули и готовы к новым достижениям. Желаю вам сегодня максимальной продуктивности, новых идей и успешного выполнения всех запланированных задач. \n\n Хорошего и эффективного дня всем!'
+      );
+  }, // onTick
+  null, // onComplete
+  true, // start
+  'Europe/Istanbul' // timeZone
+);
 // const job3 = new CronJob(
 //   '0 0 11 * * TUE', // cronTime
 //   function () {
