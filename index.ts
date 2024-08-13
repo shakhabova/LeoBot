@@ -43,6 +43,12 @@ bot.hears(/ударь/i, (ctx) => {
   ctx.replyWithSticker('CAACAgIAAxkBAAMqZmvahFovSs5Pvu3FXTGWZy7tjXoAAjUAA1m7_CWaxXqDGuB4VDUE');
 });
 
+
+bot.hears(/лео подними боевой дух/i, (ctx) => {
+  console.log(ctx.chat.id);
+  ctx.reply('Команда, боевой дух успешно поднят до космических высот!\n\n Теперь все готовы покорить галактики… или хотя бы доделать таски до конца дня. 🚀😏');
+})
+
 bot.hears(/дай email (.+)/i, async (ctx) => {
   const email = await emailsBD.getByEmail(ctx.match[1]);
   if (!email) {
