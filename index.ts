@@ -2,10 +2,12 @@ import { CronJob } from 'cron';
 import { Bot } from 'grammy';
 import { EmailBD } from './emails.bd';
 import 'dotenv/config'
+import { AdminPanelsBD } from './admin_panels.bd';
 
 const bot = new Bot(process.env.BOT_TOKEN!); // <-- put your bot token between the "" (https://t.me/BotFather)
 const chatId = -1002196491953;
 const emailsBD = new EmailBD();
+const adminPanelBD = new AdminPanelsBD();
 
 bot.hears(/лео[,]* представься/i, (ctx) => {
   console.log(ctx.chat.id);
@@ -65,6 +67,10 @@ bot.hears(/дай email (.+)/i, async (ctx) => {
 });
 
 bot.hears(/дай доступ к почте (.+)/i, async (ctx) => {
+  if(ctx.chat.id !== chatId){
+   await ctx.reply('У вас нет доступа к данной функции');
+   return
+  }
   const email = await emailsBD.getByName(ctx.match[1]);
   if (!email) {
     await ctx.reply('Записей не найдено для имени ' + ctx.match[1]);
@@ -75,6 +81,23 @@ bot.hears(/дай доступ к почте (.+)/i, async (ctx) => {
 Email: <code>${email.email}</code>
 Password: <code>${email.password}</code>
 Link: <code>${email.link}</code>`, { parse_mode: 'HTML'})
+
+});
+bot.hears(/дай доступ к админке (.+)/i, async (ctx) => {
+  if(ctx.chat.id !== chatId){
+   await ctx.reply('У вас нет доступа к данной функции');
+   return
+  }
+  const admins = await adminPanelBD.getByName(ctx.match[1]);
+  if (!admins) {
+    await ctx.reply('Записей не найдено для имени ' + ctx.match[1]);
+    return;
+  }
+
+  ctx.reply(`Name: ${admins.name}
+Login: <code>${admins.login}</code>
+Password: <code>${admins.password}</code>
+Link: <code>${admins.link}</code>`, { parse_mode: 'HTML'})
 
 });
 // bot.on('message:sticker', ctx => console.log(ctx.message.sticker))
