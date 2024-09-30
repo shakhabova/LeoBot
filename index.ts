@@ -127,6 +127,18 @@ const job2 = new CronJob(
   true, // start
   'Europe/Istanbul' // timeZone
 );
+
+bot.hears(/\/start_poll/, (msg) => {
+  bot.api.sendPoll(
+      chatId,
+      'How does your workweek start?', // Вопрос опроса
+      [{text:'Conquering mountains!'}, {text:'Everything’s on track'}, {text:'A bit chaotic'}, {text:'Is it Friday yet?'}],   // Варианты ответов
+      {
+          is_anonymous: true, // Делать ли опрос анонимным
+          allows_multiple_answers: false, // Разрешать ли выбирать несколько ответов
+      }
+  );
+});
 // const job3 = new CronJob(
 //   '0 0 15 * * FRI', // cronTime
 //   function () {
