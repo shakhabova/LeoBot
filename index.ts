@@ -128,7 +128,7 @@ const job2 = new CronJob(
   'Europe/Istanbul' // timeZone
 );
 
-bot.hears(/\/start_poll/, (msg) => {
+bot.hears(/\/survey/, (msg) => {
   bot.api.sendPoll(
       chatId,
       'How does your workweek start?', // Вопрос опроса
