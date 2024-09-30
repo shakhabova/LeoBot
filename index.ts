@@ -139,6 +139,11 @@ bot.hears(/\/start_poll/, (msg) => {
       }
   );
 });
+
+bot.api.setMyCommands([
+  {command: 'survey', description: 'weekly survey'},
+  {command: 'google_meet', description: 'Создать линк на google meet'}
+])
 // const job3 = new CronJob(
 //   '0 0 15 * * FRI', // cronTime
 //   function () {
