@@ -116,17 +116,30 @@ const job = new CronJob(
 );
 
 const job2 = new CronJob(
-  '0 20 11 * * MON', // cronTime
+  '0 00 11 * * MON', // cronTime
   function () {
     bot.api.sendMessage(
       chatId,
-      'Доброе утро, команда! \n\nНадеюсь, вы хорошо отдохнули и готовы к новым достижениям. Желаю вам сегодня максимальной продуктивности, новых идей и успешного выполнения всех запланированных задач. \n\n Хорошего и эффективного дня всем!'
+      'Hi, team! \n\n A new week means new opportunities. I hope the weekend has filled you with energy and positivity. Wishing you all energy, inspiration, and a productive day at work. \n\n Have a great day and good luck with your tasks!⚡️'
       );
   }, // onTick
   null, // onComplete
   true, // start
   'Europe/Istanbul' // timeZone
 );
+
+// const job2 = new CronJob(
+//   '0 20 11 * * MON', // cronTime
+//   function () {
+//     bot.api.sendMessage(
+//       chatId,
+//       'Доброе утро, команда! \n\nНадеюсь, вы хорошо отдохнули и готовы к новым достижениям. Желаю вам сегодня максимальной продуктивности, новых идей и успешного выполнения всех запланированных задач. \n\n Хорошего и эффективного дня всем!'
+//       );
+//   }, // onTick
+//   null, // onComplete
+//   true, // start
+//   'Europe/Istanbul' // timeZone
+// );
 
 bot.hears(/\/survey/, (msg) => {
   bot.api.sendPoll(
