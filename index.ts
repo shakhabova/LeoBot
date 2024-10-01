@@ -128,18 +128,18 @@ const job2 = new CronJob(
   'Europe/Istanbul' // timeZone
 );
 
-const job4 = new CronJob(
-  '0 35 10 * * TUE', // cronTime
-  function () {
-    bot.api.sendMessage(
-      chatId,
-      'Colleagues, today is Huseyn`s birthday! 🎉 \n\n Let’s wish our birthday person endless inspiration, successful projects, and for each day to bring new victories and joys. May work bring satisfaction, and life — only pleasant surprises. Wishing you happiness, health, and incredible success in everything! 🎂🎁'
-    );
-  }, // onTick
-  null, // onComplete
-  true, // start
-  'Europe/Istanbul' // timeZone
-);
+// const job4 = new CronJob(
+//   '0 35 10 * * TUE', // cronTime
+//   function () {
+//     bot.api.sendMessage(
+//       chatId,
+//       'Colleagues, today is Huseyn`s birthday! 🎉 \n\n Let’s wish our birthday person endless inspiration, successful projects, and for each day to bring new victories and joys. May work bring satisfaction, and life — only pleasant surprises. Wishing you happiness, health, and incredible success in everything! 🎂🎁'
+//     );
+//   }, // onTick
+//   null, // onComplete
+//   true, // start
+//   'Europe/Istanbul' // timeZone
+// );
 // const job2 = new CronJob(
 //   '0 20 11 * * MON', // cronTime
 //   function () {
