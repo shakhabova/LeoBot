@@ -166,7 +166,7 @@ const birthdayCrone = new CronJob(
 //   'Europe/Istanbul' // timeZone
 // );
 
-bot.hears(/\/survey/, (msg) => {
+bot.command('survey', (msg) => {
   bot.api.sendPoll(
       chatId,
       'How does your workweek start?', // Вопрос опроса
@@ -177,7 +177,7 @@ bot.hears(/\/survey/, (msg) => {
       }
   );
 });
-bot.hears(/\/survey2/, (msg) => {
+bot.command('survey2', (msg) => {
   bot.api.sendPoll(
       chatId,
       'Кто хочет поныть?', // Вопрос опроса
