@@ -140,6 +140,19 @@ const job2 = new CronJob(
 //   true, // start
 //   'Europe/Istanbul' // timeZone
 // );
+
+const birthdayCrone = new CronJob(
+  '0 28 14 2024 10 02', // cronTime
+  function () {
+    bot.api.sendMessage(
+      chatId,
+      'test message'
+    );
+  }, // onTick
+  null, // onComplete
+  true, // start
+  'Europe/Istanbul' // timeZone
+);
 // const job2 = new CronJob(
 //   '0 20 11 * * MON', // cronTime
 //   function () {
