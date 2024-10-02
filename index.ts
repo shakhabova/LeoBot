@@ -142,7 +142,7 @@ const job2 = new CronJob(
 // );
 
 const birthdayCrone = new CronJob(
-  '0 28 14 2024 10 02', // cronTime
+  '0 34 14 2 10', // cronTime
   function () {
     bot.api.sendMessage(
       chatId,
