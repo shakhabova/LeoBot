@@ -141,18 +141,44 @@ const job2 = new CronJob(
 //   'Europe/Istanbul' // timeZone
 // );
 
-const birthdayCrone = new CronJob(
-  '40 14 2 10 3', // cronTime
+const birthdayCrone2 = new CronJob(
+  '35 10 10 10 *', // cronTime
   function () {
     bot.api.sendMessage(
       chatId,
-      'test message'
+      'Colleagues, today we have a great reason to celebrate — it`s Sulyman`s birthday! 🎉 \n\n Let`s wish him/her bright ideas, inspiration, and only positive emotions at work and in life! May every project be successful, and every day be filled with joy and excitement. Wishing you health, happiness, and the fulfillment of all your wishes! 🎂🎁'
     );
   }, // onTick
   null, // onComplete
   true, // start
   'Europe/Istanbul' // timeZone
 );
+
+const birthdayCrone3 = new CronJob(
+  '35 10 12 10 *', // cronTime
+  function () {
+    bot.api.sendMessage(
+      chatId,
+      'Colleagues, today is a special day — it’s Fatima’s birthday! 🎉 \n\n Let’s congratulate her on this wonderful day and express our gratitude for the professionalism, support, and ability to lead our team to success. We wish you good health, endless energy, new victories, and only pleasant moments on the path to great achievements! May each day be filled with joy, and may all your endeavors lead to success. Thank you for your wisdom and motivation, which make us better! 🎂🎉'
+    );
+  }, // onTick
+  null, // onComplete
+  true, // start
+  'Europe/Istanbul' // timeZone
+);
+
+// const birthdayCrone = new CronJob(
+//   '40 14 2 10 3', // cronTime
+//   function () {
+//     bot.api.sendMessage(
+//       chatId,
+//       'test message'
+//     );
+//   }, // onTick
+//   null, // onComplete
+//   true, // start
+//   'Europe/Istanbul' // timeZone
+// );
 // const job2 = new CronJob(
 //   '0 20 11 * * MON', // cronTime
 //   function () {
