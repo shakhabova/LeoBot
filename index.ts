@@ -146,7 +146,7 @@ const birthdayCrone2 = new CronJob(
   function () {
     bot.api.sendMessage(
       chatId,
-      'Colleagues, today we have a great reason to celebrate — it`s Sulyman`s birthday! 🎉 \n\n Let`s wish him/her bright ideas, inspiration, and only positive emotions at work and in life! May every project be successful, and every day be filled with joy and excitement. Wishing you health, happiness, and the fulfillment of all your wishes! 🎂🎁'
+      'Colleagues, today we have a great reason to celebrate — it`s Sulyman`s birthday! 🎉 \n\n Let`s wish him bright ideas, inspiration, and only positive emotions at work and in life! May every project be successful, and every day be filled with joy and excitement. Wishing you health, happiness, and the fulfillment of all your wishes! 🎂🎁'
     );
   }, // onTick
   null, // onComplete
