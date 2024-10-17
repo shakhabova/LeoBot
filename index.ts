@@ -128,6 +128,19 @@ const job2 = new CronJob(
   'Europe/Istanbul' // timeZone
 );
 
+const job3 = new CronJob(
+  '0 50 09 * * THU', // cronTime
+  function () {
+    bot.api.sendMessage(
+      chatId,
+      'Good morning, team! \n\n Just a quick reminder to update your tasks in Trello and leave daily comments to keep everything on track while our manager is on vacation. \n\n Wishing everyone a productive and wonderful day! 🌟'
+      );
+  }, // onTick
+  null, // onComplete
+  true, // start
+  'Europe/Istanbul' // timeZone
+);
+
 // const job4 = new CronJob(
 //   '0 35 10 * * TUE', // cronTime
 //   function () {
