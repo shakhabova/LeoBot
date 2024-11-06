@@ -128,31 +128,20 @@ const job2 = new CronJob(
   'Europe/Istanbul' // timeZone
 );
 
-const job3 = new CronJob(
-  '0 50 09 * * THU', // cronTime
+
+
+const job4 = new CronJob(
+  '00 09 07 11 *', // cronTime
   function () {
     bot.api.sendMessage(
       chatId,
-      'Good morning, team! \n\n Just a quick reminder to update your tasks in Trello and leave daily comments to keep everything on track while our manager is on vacation. \n\n Wishing everyone a productive and wonderful day! 🌟'
-      );
+      'Colleagues, today we have a great reason to celebrate — it’s Fuad`s birthday! 🎉 \n\n Let’s wish him fewer bugs, successful tests, and only positive results in every project! May each workday bring fresh insights and satisfaction, and may life outside of work be filled with exciting travels, inspiration, and new horizons. Here’s to happiness, health, and the fulfillment of his boldest dreams, both in his career and personal adventures! 🎂✈️'
+    );
   }, // onTick
   null, // onComplete
   true, // start
   'Europe/Istanbul' // timeZone
 );
-
-// const job4 = new CronJob(
-//   '0 35 10 * * TUE', // cronTime
-//   function () {
-//     bot.api.sendMessage(
-//       chatId,
-//       'Colleagues, today is Huseyn`s birthday! 🎉 \n\n Let’s wish our birthday person endless inspiration, successful projects, and for each day to bring new victories and joys. May work bring satisfaction, and life — only pleasant surprises. Wishing you happiness, health, and incredible success in everything! 🎂🎁'
-//     );
-//   }, // onTick
-//   null, // onComplete
-//   true, // start
-//   'Europe/Istanbul' // timeZone
-// );
 
 const birthdayCrone2 = new CronJob(
   '35 10 10 10 *', // cronTime
