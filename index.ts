@@ -23,6 +23,10 @@ bot.command('google_meet', (ctx)=>{
  ctx.reply('https://meet.google.com/gww-tviv-wvj')
 });
 
+bot.command('personal_link', (ctx)=>{
+  ctx.reply('https://meet.google.com/vam-nham-zcj')
+ });
+ 
 bot.hears(/check_id/i, ctx => {
   console.log(ctx.chat);
 })
@@ -220,7 +224,8 @@ bot.command('survey2', (msg) => {
 bot.api.setMyCommands([
   {command: 'survey', description: 'weekly survey'},
   {command: 'survey2', description: 'whine check'},
-  {command: 'google_meet', description: 'Создать линк на google meet'}
+  {command: 'google_meet', description: 'Создать линк на google meet'},
+  {command: 'personal_link', description: 'Fatima`s link'}
 ])
 
 // const job3 = new CronJob(
