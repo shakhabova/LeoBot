@@ -132,6 +132,18 @@ const job2 = new CronJob(
   'Europe/Istanbul' // timeZone
 );
 
+const job5 = new CronJob(
+  '0 00 14 * * MON', // cronTime
+  function () {
+    bot.api.sendMessage(
+      chatId,
+      '🎄✨ Friends, Happy New Year! ✨🎄 \n\n May this year bring us inspiration, new achievements, and successes that will bring joy to us all! I wish each of you health, happiness, and energy to accomplish everything you’ve planned. May all projects be successful, deadlines realistic, and tasks truly inspiring. 🎯🔥 \n\n Happy New Year, team! Let 2025 be a successful and unforgettable year for all of us! 🌟'
+      );
+  }, // onTick
+  null, // onComplete
+  true, // start
+  'Europe/Istanbul' // timeZone
+);
 
 
 const job4 = new CronJob(
