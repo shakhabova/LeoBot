@@ -133,12 +133,12 @@ const job2 = new CronJob(
 );
 
 const job5 = new CronJob(
-  '0 00 14 * * MON', // cronTime
+  '00 09 16 01 *', // cronTime
   function () {
     bot.api.sendMessage(
       chatId,
-      '🎄✨ Friends, Happy New Year! ✨🎄 \n\n May this year bring us inspiration, new achievements, and successes that will bring joy to us all! I wish each of you health, happiness, and energy to accomplish everything you’ve planned. May all projects be successful, deadlines realistic, and tasks truly inspiring. 🎯🔥 \n\n Happy New Year, team! Let 2025 be a successful and unforgettable year for all of us! 🌟'
-      );
+      'Colleagues, today we have a wonderful reason to celebrate — it’s our amazing colleague Aytaj’s birthday! 🎉 Let’s wish her great success at work, ease in solving tasks, and joy from every new achievement! 💻🌟\n\n May each day be filled with inspiration, warmth, and the support of those around her! We wish her good health , happiness , and the fulfillment of all her dreams . May all projects go smoothly, and life bring only positive surprises 🌟✨.Happy Birthday, Aytaj! 🎂🎊'
+    );
   }, // onTick
   null, // onComplete
   true, // start
