@@ -185,6 +185,18 @@ const birthdayCrone3 = new CronJob(
   'Europe/Istanbul' // timeZone
 );
 
+const bd_Ruslan = new CronJob(
+  '00 09 26 02 *', // cronTime
+  function () {
+    bot.api.sendMessage(
+      chatId,
+      'Colleagues, today is Ruslan`s birthday! 🎉🎂 \n\n  Let’s all congratulate him and wish him less routine with invoices 📑, quick and smooth website updates 💻, and only successful projects! 🚀 And as a true quiz fan 🧠🎯, we wish him to always have the right answers, easily solve the trickiest puzzles, and collect a whole series of victories! 🏆 May each day bring new discoveries, fun moments, and amazing experiences! \n\n Wishing you happiness, health, and only positive vibes! 🥳🎊'
+    );
+  }, // onTick
+  null, // onComplete
+  true, // start
+  'Europe/Istanbul' // timeZone
+);
 // const birthdayCrone = new CronJob(
 //   '40 14 2 10 3', // cronTime
 //   function () {
