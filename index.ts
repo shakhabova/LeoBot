@@ -186,7 +186,7 @@ const birthdayCrone3 = new CronJob(
 );
 
 const bd_Ruslan = new CronJob(
-  '03 14 26 02 *', // cronTime
+  '00 09 27 02 *', // cronTime
   function () {
     bot.api.sendMessage(
       chatId,
