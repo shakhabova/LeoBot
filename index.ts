@@ -199,7 +199,7 @@ const bd_Ruslan = new CronJob(
 );
 
 const bd_AdamSul = new CronJob(
-  '13 50 05 05 *', // cronTime
+  '13 52 12 05 *', // cronTime
   function () {
     bot.api.sendMessage(
       chatId,
